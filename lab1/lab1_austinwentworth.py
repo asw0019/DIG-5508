@@ -351,14 +351,15 @@ print(random.randint(2,100))
 # The function should accept a single argument. For instance, sum_random(2)
 # would sum two numbers between 1 and 100: 34 and 16 and return the value 50.
 
+import random
+
 def sum_random(x):
-    import random
     y = 0
     sum = 0
     while y < x:
         sum = sum + random.randint(1,100)
         y = y + 1
-    print(sum)
+    return sum
 
 sum_random(5)
 
