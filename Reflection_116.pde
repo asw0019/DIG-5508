@@ -1,6 +1,6 @@
 // This is exercise 12-1, in which I calculate the median.
 
-float mean(float[] sequence){
+float median(float[] sequence){
   float sum = 0;
   int i;
   float k;
@@ -23,7 +23,7 @@ float mean(float[] sequence){
   return sequence[i];
 }
 
-float[] values = {2,3,1};
+float[] values = {50,100,5};
 // 9,10,25,33,35,52,73,76,86
 void setup() {
   size(200, 100);
@@ -31,6 +31,6 @@ void setup() {
   for (int i = 0; i < values.length; i++){
     rect(i * 20,100 - values[i],20,values[i]);
   }
-  rect(0, 100 - mean(values), 200, 0);
-  println(mean(values));
+  rect(0, 100 - median(values), 200, 0);
+  println(median(values));
 }
