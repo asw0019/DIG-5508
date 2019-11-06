@@ -1,5 +1,6 @@
 // This is exercise 12-1, in which I calculate the median.
-
+// https://beginnersbook.com/2018/10/java-program-to-sort-an-array-in-ascending-order/ 
+// for the sort function.
 float median(float[] sequence){
   float sum = 0;
   int i;
