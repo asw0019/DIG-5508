@@ -5,6 +5,7 @@ float median(float[] sequence){
   int i;
   float k;
   float l;
+  float med;
   for (i = 0; i < sequence.length; i++){
     for (int j = i + 1; j < sequence.length; j++){
       if (sequence[i] > sequence[j]){
@@ -14,16 +15,17 @@ float median(float[] sequence){
       }
     }
   }
+  i = (i / 2);
   if (sequence.length % 2 == 0){
-  i = (i / 2) - 1;
+  med = (sequence[i] + sequence[i - 1]) / 2;
   }
   else{
-  i = (i / 2);
+  med = sequence[i];
   }
-  return sequence[i];
+  return med;
 }
 
-float[] values = {50,100,5};
+float[] values = {75,100,5,200};
 // 9,10,25,33,35,52,73,76,86
 void setup() {
   size(200, 100);
