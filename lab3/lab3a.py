@@ -19,8 +19,8 @@ class Car(object):
         if self.xpos > width:
             self.xpos = 0
             
-myCar1 = Car(c(255, 0, 0), 0, 100, 2)
-myCar2 = Car(c(0, 255, 255), 0, 10, 1)
+myCar1 = Car(color(255, 0, 0), 0, 100, 2)
+myCar2 = Car(color(0, 255, 255), 0, 10, 1)
 
 def setup():
     size(200,200)
