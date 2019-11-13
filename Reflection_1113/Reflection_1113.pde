@@ -1,4 +1,4 @@
-// This is exercise 12-1, in which I calculate the median
+// This is exercise 12-2, in which I calculate the mode
 // https://www.tutorialspoint.com/Java-program-to-calculate-mode-in-Java for finding the mode.
 float mode(float[] sequence){
   float[] modes = {};
