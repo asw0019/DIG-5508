@@ -1,10 +1,9 @@
-// This is exercise 12-1, in which I calculate the median
+// This is exercise 12-3, in which I calculate the standard deviation.
 // I used https://stackoverflow.com/questions/40117353/standard-deviation-calculator-java for my standard deviation.
 float standardDev(float[] sequence){
   float sum = 0;
   float newSum = 0; 
   float [] newArray = new float [20]; 
-  
   // first, calculate mean
   for (int i = 0; i<sequence.length; i++){
     // add the numbers in a sequence
@@ -12,7 +11,6 @@ float standardDev(float[] sequence){
   }
   // divides the total by the length
   float mean = (sum) / (sequence.length); 
-  
   // next, 
   for (int j = 0; j<sequence.length; j++){
     // finds the distance from each number in sequence from mean, squares it, and adds it together
@@ -26,8 +24,7 @@ float standardDev(float[] sequence){
   // ...and finally, returns it!
   return standardDev; 
 }
-
-float[] values = {1,2};
+float[] values = {9,25,52,10,33,76,35,86,73,10};
 // 9,10,25,33,35,52,73,76,86
 void setup() {
   size(200, 100);
