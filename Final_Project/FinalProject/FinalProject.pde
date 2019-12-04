@@ -71,11 +71,11 @@ void setup(){
   float [] arr2 = new float[size2];
   for (int i = 0; i < highs.length; i++){
     arr[i] = Float.parseFloat(highs[i]);
-    rect(i * 20,100 - highs[i],20,highs[i]);
-    
+    rect(i * 10,100 - Float.parseFloat(highs[i]),10,Float.parseFloat(highs[i]));
   }
   for (int j = 0; j < lows.length; j++){
     arr2[j] = Float.parseFloat(lows[j]);
+    rect(j * 10,100 - Float.parseFloat(highs[j]),10,Float.parseFloat(highs[j]));
   }
   println("The average high temperature from this period in this location was: " + mean(arr) + " degrees Fahrenheit.");
   println("The average low temperature from this period in this location was: " + mean(arr2) + " degrees Fahrenheit.");
