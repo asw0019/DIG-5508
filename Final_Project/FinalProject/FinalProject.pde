@@ -7,7 +7,7 @@ float mean(float[] sequence){
   sum = sum / sequence.length;
   return sum;
 }
-
+// https://beginnersbook.com/2018/10/java-program-to-sort-an-array-in-ascending-order for the sort function.
 float median(float[] sequence){
   float sum = 0;
   int i;
@@ -15,6 +15,7 @@ float median(float[] sequence){
   float l;
   float med;
   for (i = 0; i < sequence.length; i++){
+    // The array is sorted. At each number, the sort sees if the remaining numbers are greater.
     for (int j = i + 1; j < sequence.length; j++){
       if (sequence[i] > sequence[j]){
         k = sequence[i];
@@ -23,6 +24,7 @@ float median(float[] sequence){
       }
     }
   }
+  // Checks for odd or even sized array
   i = (i / 2);
   if (sequence.length % 2 == 0){
   med = (sequence[i] + sequence[i - 1]) / 2;
@@ -32,7 +34,7 @@ float median(float[] sequence){
   }
   return med;
 }
-
+// I used https://stackoverflow.com/questions/40117353/standard-deviation-calculator-java for my standard deviation.
 float standardDev(float[] sequence){
   float sum = 0;
   float newSum = 0; 
@@ -62,7 +64,7 @@ float[] values = {75,100,5,200};
 // 9,10,25,33,35,52,73,76,86
 void setup(){
   size(200, 100);
-  // rect(30,15,20,10);
+  // Strings loading methods from https://processing.org/reference/loadStrings_.html
   String[] highs = loadStrings("219-0.txt");
   String[] lows = loadStrings("1342-0.txt");
   int size = highs.length;
@@ -70,6 +72,7 @@ void setup(){
   float [] arr = new float [size];
   float [] arr2 = new float[size2];
   for (int i = 0; i < highs.length; i++){
+    // from https://www.geeksforgeeks.org/float-parsefloat-method-in-java-with-examples/
     arr[i] = Float.parseFloat(highs[i]);
     rect(i * 10,100 - Float.parseFloat(highs[i]),10,Float.parseFloat(highs[i]));
   }
